@@ -38,7 +38,7 @@
                         </div>
                         <div class="bloqueInternoTres">
                             <img class="iconoDos" src="img/icon/gear.png" alt="imagen de una tuerca">
-                            <span><a id="nombrePerfil" onchange="editarNombre(this)" href="#">edit profile</a></span>
+                            <span><a id="nombrePerfil" onclick="editarNombre(this)" href="#">edit profile</a></span>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div id="bloqueColumnaDerecha">
-                <div class="bloqueDerecho">
+                <div class="bloqueDerecho" id="bloqueSolicitud">
                     <div class="bloqueParteSuperiorDerecho">
                         <h3 class="contador">2</h3>
                         <h3 class="barraTitulo">Connection Requests</h3>
@@ -66,8 +66,8 @@
                                 <span>Todd E</span>
                             </div>
                             <ul class="listaIconos">
-                                <li><a href="#"><img src="./img/icon/accept-circle.png" alt="icono aceptar"></a></li>
-                                <li><a href="#"><img src="./img/icon/close-circle.png" alt="icono rechazar"></a></li>
+                                <li><a id="acepto1" onclick="evaluarSolicitud(this)" href="#"><img src="./img/icon/accept-circle.png" alt="icono aceptar"></a></li>
+                                <li><a id="rechazo1" onclick="evaluarSolicitud(this)" href="#"><img src="./img/icon/close-circle.png" alt="icono rechazar"></a></li>
                             </ul>
                         </div>
                         <div class="bloqueFilaUsuario">
@@ -76,15 +76,15 @@
                                 <span>Phil K</span>
                             </div>
                             <ul class="listaIconos">
-                                <li><a href="#"><img src="./img/icon/accept-circle.png" alt="icono aceptar"></a></li>
-                                <li><a href="#"><img src="./img/icon/close-circle.png" alt="icono rechazar"></a></li>
+                                <li><a id="acepto2" onclick="evaluarSolicitud(this)" href="#"><img src="./img/icon/accept-circle.png" alt="icono aceptar"></a></li>
+                                <li><a id="rechazo2" onclick="evaluarSolicitud(this)" href="#"><img src="./img/icon/close-circle.png" alt="icono rechazar"></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="bloqueDerecho">
+                <div class="bloqueDerecho" id="bloqueConexion">
                     <div class="bloqueParteSuperiorDerecho">
-                        <h3 class="contador">500+</h3>
+                        <h3 class="contador">480</h3>
                         <h3 class="barraTitulo">Your Connections</h3>
                     </div>
                     <div class="bloqueParteInferiorDosDerecho">
