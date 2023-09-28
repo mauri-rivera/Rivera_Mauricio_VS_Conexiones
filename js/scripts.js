@@ -24,19 +24,17 @@ function evaluarSolicitud(elemento) {
     let bloqueSolicitud = enlaceUsuario.closest("#bloqueSolicitud");
     let cantidadSolicitud = bloqueSolicitud.querySelector("h3").innerHTML;
 
-    if (estadoSolicitud === "a") {
-        let estadoConexion = document.querySelector("#bloqueConexion");
-        let cantidadConexion = estadoConexion.querySelector("h3").innerHTML;
+    if (estadoSolicitud === "a" || estadoSolicitud === "r") {
+        ubicacionUsuario.remove();
+        cantidadSolicitud--;
+        bloqueSolicitud.querySelector("h3").innerHTML = cantidadSolicitud; 
 
-        ubicacionUsuario.remove();
-        cantidadSolicitud--;
-        cantidadConexion++;
-        bloqueSolicitud.querySelector("h3").innerHTML = cantidadSolicitud; 
-        estadoConexion.querySelector("h3").innerHTML = cantidadConexion; 
-    }
-    else{
-        ubicacionUsuario.remove();
-        cantidadSolicitud--;
-        bloqueSolicitud.querySelector("h3").innerHTML = cantidadSolicitud; 
+        if (estadoSolicitud === "a") {
+            let estadoConexion = document.querySelector("#bloqueConexion");
+            let cantidadConexion = estadoConexion.querySelector("h3").innerHTML;
+
+            cantidadConexion++;
+            estadoConexion.querySelector("h3").innerHTML = cantidadConexion;
+        }
     }
 }
